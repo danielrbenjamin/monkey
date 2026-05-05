@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monkey</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="icons/icon48.png" width="24" height="24" alt="Monkey" style="border-radius:5px;" />
+      <span class="logo-text">Monkey</span>
+    </div>
+    <button class="record-btn" id="recordBtn">
+      <span class="record-btn-dot"></span>
+      <span id="recordBtnLabel">Start Recording</span>
+    </button>
+    <button class="pause-btn" id="pauseBtn" hidden>Pause</button>
+    <button class="close-btn" id="closeBtn" title="Close sidebar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </header>
+
+  <div class="steps-wrap" id="stepsWrap">
+    <div class="empty-state" id="emptyState">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.5">
+        <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+      </svg>
+      <p>Hit <strong>Start Recording</strong> then click around the page.</p>
+      <p class="empty-sub">Steps appear here as you go.</p>
+    </div>
+    <ol class="steps-list" id="stepsList"></ol>
+  </div>
+
+  <footer class="footer">
+    <button class="btn-guide" id="openGuideBtn" disabled>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+      Open guide
+    </button>
+    <button class="btn-library" id="libraryBtn" title="View saved guides">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 014 17V5a2 2 0 012-2h14v14"/></svg>
+    </button>
+    <button class="btn-clear" id="clearBtn">Clear</button>
+  </footer>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

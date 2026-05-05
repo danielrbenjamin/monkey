@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monkey – Library</title>
+  <link rel="stylesheet" href="library.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <a href="#" id="backBtn" class="back-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      </a>
+      <div class="logo">
+        <img src="icons/icon48.png" width="28" height="28" alt="Monkey" style="border-radius:6px;" />
+        <div>
+          <h1 class="page-title">Library</h1>
+          <p class="page-meta" id="pageMeta">Loading…</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="empty-state hidden" id="emptyState">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#d1d5db" stroke-width="1.2">
+        <path d="M4 19.5A2.5 2.5 0 016.5 17H20M4 19.5A2.5 2.5 0 014 17V5a2 2 0 012-2h14v14"/>
+      </svg>
+      <h2>No saved guides yet</h2>
+      <p>Record a workflow, open the full guide, then click <strong>Save to Library</strong>.</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <template id="cardTemplate">
+    <article class="guide-card">
+      <div class="card-thumb">
+        <img class="card-thumb-img" alt="" />
+        <div class="card-thumb-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#9ca3af" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="card-title" contenteditable="false" spellcheck="true"></h2>
+        <p class="card-meta"></p>
+      </div>
+      <div class="card-actions">
+        <button class="card-open">Open</button>
+        <button class="card-delete" title="Delete guide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg>
+        </button>
+      </div>
+    </article>
+  </template>
+
+  <script src="library.js"></script>
+</body>
+</html>
