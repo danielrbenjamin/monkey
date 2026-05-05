@@ -710,10 +710,50 @@
 
     .text-center { text-align: center; }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
+      /* Nav */
       .nav-links { display: none; }
+
+      /* Hero */
+      .hero { padding: 64px 20px 56px; }
       h1 { letter-spacing: -1.5px; }
-      .section { padding: 64px 20px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn-hero { justify-content: center; }
+
+      /* Trust strip */
+      .trust-strip-inner {
+        gap: 14px 20px;
+        justify-content: flex-start;
+      }
+      .trust-divider { display: none; }
+
+      /* Sections */
+      .section { padding: 56px 20px; }
+      h2 { letter-spacing: -0.8px; }
+      .section-sub { font-size: 15px; margin-bottom: 40px; }
+
+      /* Steps + features grids → single column */
+      .steps-grid,
+      .features-grid { grid-template-columns: 1fr; }
+
+      /* Features grid: remove hairline grid gaps, add borders */
+      .features-grid { background: none; gap: 1px; }
+      .feature-item { border: 1px solid var(--gray-200); border-radius: 12px; }
+
+      /* Comparison table: shrink padding, smaller text */
+      .comparison-table { font-size: 12px; }
+      .comparison-table th,
+      .comparison-table td { padding: 10px 12px; }
+
+      /* Security section */
+      .compliance-grid { grid-template-columns: 1fr; }
+      .security-detail-grid { grid-template-columns: 1fr; gap: 18px; }
+
+      /* Demo mockup */
+      .mockup-steps { padding: 16px; gap: 16px; }
+
+      /* CTA */
+      .cta-section { padding: 64px 20px; }
     }
   </style>
 </head>
