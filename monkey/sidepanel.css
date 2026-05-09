@@ -325,22 +325,24 @@ body {
 .btn-guide:disabled { opacity: 0.4; cursor: not-allowed; }
 
 .btn-library {
-  width: 34px;
-  height: 34px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  background: none;
-  border: 1px solid var(--gray-200);
+  gap: 6px;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  border: none;
   border-radius: 8px;
   cursor: pointer;
-  color: var(--gray-500);
+  color: white;
   flex-shrink: 0;
-  transition: all 0.12s;
+  transition: all 0.15s;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  box-shadow: 0 2px 4px rgba(124, 58, 237, 0.25);
 }
 
-.btn-library svg { width: 15px; height: 15px; }
-.btn-library:hover { background: var(--gray-100); border-color: var(--gray-300); color: var(--gray-900); }
+.btn-library svg { width: 15px; height: 15px; flex-shrink: 0; }
 
 .btn-clear {
   background: none;
