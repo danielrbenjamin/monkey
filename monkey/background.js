@@ -209,7 +209,7 @@ async function captureStep(tab, data) {
   let screenshot = null;
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
-      screenshot = await chrome.tabs.captureVisibleTab(tab.windowId, { format: 'png' });
+      screenshot = await chrome.tabs.captureVisibleTab(tab.windowId, { format: 'jpeg', quality: 70 });
       break;
     } catch (e) {
       if (attempt === 4) {

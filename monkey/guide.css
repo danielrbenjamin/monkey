@@ -390,25 +390,79 @@ body {
 /* ── Print styles ────────────────────────────────────────────────────────── */
 
 @media print {
-  .header, .edit-toolbar, .step-controls, .empty-state { display: none !important; }
+  /* Hide all UI chrome */
+  .header, .edit-toolbar, .step-controls,
+  .step-connector, .empty-state, .guide-footer { display: none !important; }
 
-  body { background: white; font-size: 12pt; }
+  @page { margin: 16mm 18mm; }
+
+  body { background: white; font-size: 10pt; }
 
   .main { max-width: 100%; padding: 0; margin: 0; }
 
-  .step-card { break-inside: avoid; page-break-inside: avoid; }
+  /* Each step: number | description | screenshot */
+  .step-card {
+    display: grid;
+    grid-template-columns: 26pt 1fr 200pt;
+    column-gap: 10pt;
+    align-items: start;
+    padding: 10pt 0;
+    border-bottom: 0.5pt solid #e5e7eb;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 
-  .step-screenshot { max-height: none; width: 100%; }
-
-  .step-sidebar { display: none; }
-
-  .step-body { padding: 12pt 0 16pt; border-bottom: 1pt solid #e5e7eb; }
+  /* Column 1 — number badge */
+  .step-sidebar {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1pt;
+  }
 
   .step-number {
-    display: inline-flex;
-    margin-right: 8pt;
-    margin-bottom: 8pt;
+    width: 20pt;
+    height: 20pt;
+    font-size: 9pt;
+    flex-shrink: 0;
   }
+
+  /* Column 2 — description + meta */
+  .step-body {
+    padding: 0;
+    border: none;
+  }
+
+  .step-description {
+    font-size: 10pt;
+    line-height: 1.5;
+    margin-bottom: 4pt;
+  }
+
+  .step-meta, .step-page-title {
+    font-size: 8pt;
+  }
+
+  /* Column 3 — screenshot, height-capped */
+  .step-screenshot-wrap { margin: 0; }
+
+  .step-screenshot-container {
+    border-radius: 3pt;
+    overflow: hidden;
+    border: 0.5pt solid #e5e7eb;
+  }
+
+  .step-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 120pt;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  /* Hide annotations — they don't scale correctly in print */
+  .step-annotation { display: none !important; }
 }
 
 /* ── Footer ──────────────────────────────────────────────────────────────── */

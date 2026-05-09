@@ -33,9 +33,13 @@
         Add step
       </button>
       <div class="divider"></div>
-      <button class="btn btn-ghost" id="exportMdBtn" title="Copy as Markdown">
+      <button class="btn btn-ghost" id="copyMdBtn" title="Copy Markdown to clipboard">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
-        Markdown
+        Copy MD
+      </button>
+      <button class="btn btn-ghost" id="exportMdBtn" title="Download Markdown + images as ZIP">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M8 12l4 4 4-4M12 16V4"/></svg>
+        MD + Images
       </button>
       <button class="btn btn-ghost" id="exportHtmlBtn" title="Export as HTML file">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M8 12l4 4 4-4M12 16V4"/></svg>
@@ -112,6 +116,7 @@
     <a href="https://www.flaticon.com/free-icons/monkey" title="monkey icons" target="_blank" rel="noopener">Monkey icons created by Freepik – Flaticon</a>
   </footer>
 
+  <script src="https://unpkg.com/jszip@3.10.1/dist/jszip.min.js"></script>
   <script src="guide.js"></script>
 </body>
 </html>
