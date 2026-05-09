@@ -40,7 +40,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["guide.html", "guide.js", "guide.css", "library.html", "library.js", "library.css"],
+      "resources": ["guide.html", "guide.js", "guide.css", "library.html", "library.js", "library.css", "jszip.min.js"],
       "matches": ["<all_urls>"]
     }
   ]

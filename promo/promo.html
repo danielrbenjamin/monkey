@@ -874,6 +874,215 @@
     .trust-card-amber { border-top: 3px solid #f59e0b; }
     .trust-card-red   { border-top: 3px solid var(--red); }
     .trust-card-gray  { border-top: 3px solid var(--gray-300); }
+    /* ════════════════════════════════════════════════════════════════════════ */
+    /* SMALL TILE 440×280                                                      */
+    /* ════════════════════════════════════════════════════════════════════════ */
+
+    #small-tile {
+      width: 440px;
+      height: 280px;
+      background: var(--gray-900);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #small-tile::before {
+      content: '';
+      position: absolute;
+      top: -80px; left: 50%; transform: translateX(-50%);
+      width: 340px; height: 340px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(79,70,229,0.35) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .st-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      position: relative; z-index: 1;
+    }
+
+    .st-logo img { border-radius: 8px; }
+    .st-logo-text { font-size: 22px; font-weight: 900; color: white; letter-spacing: -0.5px; }
+
+    .st-headline {
+      font-size: 20px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.6px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      position: relative; z-index: 1;
+    }
+
+    .st-headline em { font-style: normal; color: #a5b4fc; }
+
+    .st-sub {
+      font-size: 12px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.55;
+      max-width: 300px;
+      margin-bottom: 20px;
+      position: relative; z-index: 1;
+    }
+
+    .st-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.6);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px;
+      position: relative; z-index: 1;
+      letter-spacing: 0.3px;
+    }
+
+    /* ════════════════════════════════════════════════════════════════════════ */
+    /* MARQUEE TILE 1400×560                                                   */
+    /* ════════════════════════════════════════════════════════════════════════ */
+
+    #marquee-tile {
+      width: 1400px;
+      height: 560px;
+      background: var(--gray-900);
+      display: flex;
+      align-items: center;
+      padding: 0 100px;
+      gap: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #marquee-tile::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 30%; transform: translate(-50%, -50%);
+      width: 700px; height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(79,70,229,0.2) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    #marquee-tile::after {
+      content: '';
+      position: absolute;
+      bottom: -200px; right: -100px;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .mt-left {
+      flex: 0 0 520px;
+      position: relative; z-index: 1;
+    }
+
+    .mt-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .mt-logo img { border-radius: 10px; }
+    .mt-logo-text { font-size: 28px; font-weight: 900; color: white; letter-spacing: -0.6px; }
+
+    .mt-headline {
+      font-size: 56px;
+      font-weight: 900;
+      color: white;
+      letter-spacing: -2px;
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .mt-headline em { font-style: normal; color: #a5b4fc; }
+
+    .mt-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.65;
+      margin-bottom: 32px;
+      max-width: 420px;
+    }
+
+    .mt-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .mt-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+
+    .mt-right {
+      flex: 1;
+      position: relative; z-index: 1;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .mt-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 20px;
+      flex: 1;
+      transition: none;
+    }
+
+    .mt-card-icon {
+      width: 36px; height: 36px;
+      border-radius: 9px;
+      background: rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    .mt-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+      letter-spacing: -0.2px;
+    }
+
+    .mt-card p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      line-height: 1.55;
+    }
+
+    .mt-card.featured {
+      background: rgba(79,70,229,0.2);
+      border-color: rgba(99,102,241,0.4);
+      margin-top: -16px;
+    }
   </style>
 </head>
 <body>
@@ -884,7 +1093,10 @@
   <a href="#slide-3">3 — Annotations</a>
   <a href="#slide-4">4 — Export</a>
   <a href="#slide-5">5 — Privacy</a>
-  <span style="margin-left:auto;color:rgba(255,255,255,0.35);font-size:11px;">1280×800 · screenshot each slide</span>
+  <span style="color:rgba(255,255,255,0.2)">|</span>
+  <a href="#small-tile">Small 440×280</a>
+  <a href="#marquee-tile">Marquee 1400×560</a>
+  <span style="margin-left:auto;color:rgba(255,255,255,0.35);font-size:11px;">screenshot each slide</span>
 </div>
 
 <div class="slides">
@@ -1178,6 +1390,56 @@
         <span class="trust-card-icon">✅</span>
         <h4>No Account</h4>
         <p>Install and record immediately. Nothing to sign up for.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ SMALL TILE 440×280 ════════════════════════════════════════════════ -->
+  <div class="slide" id="small-tile" style="width:440px;height:280px;">
+    <span class="slide-label">Small tile · 440×280</span>
+    <div class="st-logo">
+      <img src="../monkey/icons/icon48.png" width="36" height="36" alt="Monkey" />
+      <span class="st-logo-text">Monkey</span>
+    </div>
+    <h2 class="st-headline">Record once.<br/><em>Share forever.</em></h2>
+    <p class="st-sub">Turn any workflow into an annotated step-by-step guide — automatically.</p>
+    <div class="st-badge">🔒 Free · No account · 100% private</div>
+  </div>
+
+  <!-- ══ MARQUEE TILE 1400×560 ═════════════════════════════════════════════ -->
+  <div class="slide" id="marquee-tile" style="width:1400px;height:560px;">
+    <span class="slide-label">Marquee tile · 1400×560</span>
+
+    <div class="mt-left">
+      <div class="mt-logo">
+        <img src="../monkey/icons/icon48.png" width="40" height="40" alt="Monkey" />
+        <span class="mt-logo-text">Monkey</span>
+      </div>
+      <h2 class="mt-headline">Monkey see,<br/><em>monkey do.</em></h2>
+      <p class="mt-sub">Record your workflow once. Get a polished step-by-step guide with annotated screenshots — instantly, entirely in your browser.</p>
+      <div class="mt-pills">
+        <span class="mt-pill">🔒 100% private</span>
+        <span class="mt-pill">✅ No account</span>
+        <span class="mt-pill">📖 Open source</span>
+        <span class="mt-pill">🇪🇺 GDPR ready</span>
+      </div>
+    </div>
+
+    <div class="mt-right">
+      <div class="mt-card">
+        <div class="mt-card-icon">🎬</div>
+        <h4>Hit record</h4>
+        <p>Open the sidebar and start recording. Work exactly as you normally would.</p>
+      </div>
+      <div class="mt-card featured">
+        <div class="mt-card-icon">📸</div>
+        <h4>Auto screenshots</h4>
+        <p>Every click captures a screenshot with a precise annotation on the exact element.</p>
+      </div>
+      <div class="mt-card">
+        <div class="mt-card-icon">📤</div>
+        <h4>Export anywhere</h4>
+        <p>Download as HTML, Markdown + images, or print to PDF in one click.</p>
       </div>
     </div>
   </div>
